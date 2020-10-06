@@ -2,6 +2,11 @@ package main
 
 import "fmt"
 
+//empty interfacwe
+func tryEmptyInterface(value interface{}) {
+	fmt.Println(value)
+}
+
 //interfaces : car type
 type car interface {
 	drive()
@@ -40,9 +45,16 @@ func instruct(c car) {
 	c.stop()
 }
 
-func main() {
-	l := Lambo{"Lamborghini"}
-	c := Chevvy{"Alto"}
-	instruct(l)
-	instruct(c)
-}
+// func main() {
+// 	l := Lambo{"Lamborghini"}
+// 	c := Chevvy{"Alto"}
+// 	instruct(l)
+// 	instruct(c)
+
+// 	tryEmptyInterface(10)
+// 	tryEmptyInterface("Swati")
+// 	myMap := make(map[string]interface{})
+// 	myMap["name"] = "swati"
+// 	myMap["age"] = 10
+// 	fmt.Println(myMap)
+// }
